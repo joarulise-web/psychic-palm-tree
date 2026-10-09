@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Drop: Torre Imposible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Pantalla de Inicio -->
+        <div id="start-screen" class="screen">
+            <h1 class="glow-title">NEON DROP</h1>
+            <p>Desliza para girar la torre y guía la bola al vacío sin chocar.</p>
+            <button id="start-btn" class="neon-btn">JUGAR</button>
+        </div>
+
+        <!-- Pantalla de Juego / Canvas -->
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div id="hud">
+            <span>Puntos: <strong id="score">0</strong></span><br>
+            <span style="font-size: 0.85rem; color: #ff00ff;">Nivel: <strong id="level">1</strong> / 1000</span>
+        </div>
+
+        <!-- Pantalla de Game Over -->
+        <div id="game-over-screen" class="screen hidden">
+            <h2>¡FIN DEL JUEGO!</h2>
+            <p id="final-score">Puntuación: 0</p>
+            <button id="restart-btn" class="neon-btn">INTENTAR DE NUEVO</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
